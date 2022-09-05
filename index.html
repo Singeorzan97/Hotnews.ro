@@ -1,0 +1,590 @@
+<html>
+  <head>
+    <title>HotNews.ro</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
+    <link rel="stylesheet" href="hotnews.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+          extend: {
+            borderWidth: {
+              1: '1px',
+              3: '3px'
+        },
+            letterSpacing: {
+              0.7: '.07em',
+              0.8: '.08em',
+              1:   '1'
+        },
+            fontFamily: {
+              Literata: ["Literata", "serif"]
+        },
+            fontSize: {
+              xxs:    '11px',
+              0.5:    '13px',
+              'sm-1': '15px',
+              ssm:    '22px'
+            },
+             width: {
+               285: '285px',
+               300: '300px',
+               604: '604px',
+               619: '619px',
+               938: '938px',
+               
+            },
+             screens: {
+               'mid': {'min': '960px'},
+          },
+             padding: {
+              1.5: '7px',
+              4.5: '18px',
+              5.5: '22px',
+            },
+             margin: {
+               90: '90px'
+          },
+             height: {
+               50:  '50px',
+               52:  '52px',
+               90:  '90px',
+               200: '200px',
+               438: '438px',
+            },
+              colors: {
+                hotgreen:          '#3f9863',
+                hotred:            '#eb3223',
+                hotblack:          '#393939',
+                hotBurntSienna:    '#ed5c43',
+                hotChateauGreen:   '#36a562',
+                hotMulberry:       '#d0459e',
+                hotCornflowerBlue: '#767fea',
+                hotTundora:        '#484848',
+                hotBarleyCorn:     '#9d8562',
+                hotPersianBlue:    '#2145ac',
+                hotWebOrange:      '#ffa900',
+                hotPotPourri:      '#F7E9E9',
+                hotOsloGray:       '#86898A'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="flex px-11 md:px-9 max-w-7xl mx-auto py-1.5 text-sm font-medium text-sm">
+      <div class="flex md:px-0 grow items-center px-4">
+        <img src="https://hotnews.ro/static/assets/icons/ic_updated.svg" alt="updated_icon">
+        <div class="text-hotPersianBlue">Actualizat acum un minut</div>
+      </div>
+      <div class="flex shrink text-sm">
+        <div class="text-hotPersianBlue pr-1">EUR</div>
+        <div class="text-hotgreen pr-1">4.9353</div>
+        <div class="text-hotPersianBlue pr-1">USD</div>
+        <div class="text-hotred">4.8509</div>
+      </div>
+    </div>
+    <div class="bg-hotPersianBlue">
+      <div class="mx-auto max-w-7xl md:px-0 px-7 h-90 flex">
+        <div class="items-center justify-between mx-5 flex grow">
+          <a href="../hotnews/index.html">
+            <img class="md:h-52 h-10 cursor-pointer" src="https://www.hotnews.ro/static/assets/logos/hotnews_header.svg"
+              alt="hotnews-logo">
+          </a>
+          <div class="flex shrink">
+            <img class="m-2.5" src="https://www.hotnews.ro/static/assets/icons/ic_search.svg" alt="Search-Icon">
+            <img class="m-2.5" src="https://www.hotnews.ro/static/assets/icons/ic_user.svg" alt="User-Icon">
+            <img class="m-2.5" src="https://www.hotnews.ro/static/assets/icons/ic_menu.svg" alt="Burger-Menu">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class=" px-10 hidden text-hotblack mx-auto text-lg font-bold md:flex h-50 max-w-7xl items-center">
+      <a class="pr-5 text-hotPersianBlue" href="https://www.hotnews.ro/">HOME</a>
+      <a class="pr-5 hover:text-hotBurntSienna" href="https://economie.hotnews.ro/">ECONOMIE</a>
+      <a class="pr-5 hover:text-hotChateauGreen" href="https://sport.hotnews.ro/">SPORT</a>
+      <a class="pr-5 hover:text-hotMulberry" href="https://life.hotnews.ro/">LIFE</a>
+      <a class="pr-5 hover:text-hotCornflowerBlue" href="https://science.hotnews.ro/">SCIENCE</a>
+      <a class="pr-5 hover:text-hotTundora" href="https://revistapresei.hotnews.ro/">REVISTA PRESEI</a>
+      <a class="hover:text-hotBarleyCorn" href="https://www.hotnews.ro/dosare_juridice">DOSARE JURIDICE</a>
+    </section>
+    <div class="bg-hotPersianBlue"> 
+      <section class="px-10 hidden h-50 md:flex mx-auto mb-9 md:max-w-7xl items-center text-white text-sm-1">
+        <a class="pr-5 text-hotWebOrange" href="https://www.hotnews.ro/razboi_ucraina">Război în Ucraina</a>
+        <a class="pr-5" href="https://www.hotnews.ro/coronavirus">Coronavirus</a>
+        <a class="pr-5" href="https://www.hotnews.ro/politic">Politic</a>
+        <a class="pr-5" href="https://www.hotnews.ro/educatie">Educație</a>
+        <a class="pr-5" href="https://www.hotnews.ro/sanatate">Sănătate</a>
+        <a class="pr-5" href="https://www.hotnews.ro/opinii">Opinii</a>
+        <a class="pr-5" href="https://www.hotnews.ro/infrastructura_articole">Infrastructură</a>
+        <a href="https://www.hotnews.ro/administratie_locala">Administrație</a>
+      </section>
+    </div>
+    <section class="pl-16 mb-5 text-lg md:hidden font-bold h-50 flex items-center">
+      <a class="text-hotPersianBlue pr-2" href="https://www.hotnews.ro/">HOME</a>
+      <a href="https://www.hotnews.ro/ultima_ora">ULTIMA ORA</a>
+    </section>
+
+    <!-- Header Final -->
+
+    <!-- REAPERUL TUTUROR -->
+    <div class="flex max-w-7xl mx-auto px-8">
+      <main class="flex justify-between flex-wrap md:max-w-7xl content-start">
+        <!-- Here at this section with Parlamentul European again i don't know how to make responsive design at 600px or less like on hotnews official website -->
+        <div class="rounded-md md:h-438 bg-hotPotPourri md:w-938 flex flex-col md:flex-row px-4 pt-4">
+          <figure>
+            <a href="https://www.hotnews.ro/stiri-esential-25707275-parlamentul-european-reactioneaza-declaratiile-lui-viktor-orban-deschis-rasiste-inacceptabile.htm">
+              <img class="w-604" src="./assets/image-2022-05-3-25534118-41-parlamentul-european.webp" alt="Live Razboi in Ucraina">
+            </a>
+          </figure>
+          <article class="ml-4 mb-5 mt-2.5 md:mt-0 md:w-285">
+            <div class="mb-2.5">
+              <span class="text-0.5 text-hotPersianBlue font-medium">13:28 •</span>
+              <span class="text-hotPersianBlue border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ACTUALITATE</span>
+            </div>
+            <div class="mb-8">
+              <a href="https://www.hotnews.ro/stiri-esential-25707275-parlamentul-european-reactioneaza-declaratiile-lui-viktor-orban-deschis-rasiste-inacceptabile.htm">
+                <h1 class="font-semibold mb-1.5 text-lg">Parlamentul European reacționează la declarațiile lui Viktor Orban: „Deschis rasiste” și inacceptabile</h1>
+                <p class="text-hotblackn flex flex-col text-base font-normal font-Literata">Liderii grupurilor politice din
+                  Parlamentul European condamnă, printr-o declarație comună, afirmațiile premierului ungar Viktor Orban,
+                  pe care le califică „deschis rasiste”, inacceptabile și în contradicție cu...</p>
+              </a>
+            </div>
+            <div class="flex justify-between pt-8">
+              <img src="./assets/share_gray.svg" alt="icon">
+              <div class="flex">
+                <img src="./assets/comment_gray.svg" alt="icon">
+                <span class="ml-1 text-0.5 text-hotOsloGray">10</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- Here ends that section with Parlamentul European -->
+
+        <!-- On this sections i don't know how to make responsive design at 600px or less like on hotnews official website -->
+        <section class="w-300 border-b-1 pb-2 mt-5">
+          <figure>
+            <a href="https://www.hotnews.ro/stiri-esential-25707085-cand-isi-incep-viata-sexuala-tinerii-din-generatia-sex-overrated-majoritatea-lumii-exagereaza.htm">
+              <img class="h-200 object-cover w-full rounded-md" src="./assets/image-2022-07-30-25707079-41-generatia.webp" alt="Generatia Tineri">
+            </a>
+          </figure>
+          <div class="pt-2.5">
+            <span class="text-hotPersianBlue text-0.5">12:14 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 text-hotPersianBlue border-solid">ACTUALITATE</span>
+            <a href="https://www.hotnews.ro/stiri-esential-25707085-cand-isi-incep-viata-sexuala-tinerii-din-generatia-sex-overrated-majoritatea-lumii-exagereaza.htm">
+              <h1 class="pt-2">Când își încep viața sexuală tinerii din Generația Z: „Sex is overrated. Majoritatea lumii îl exagerează”</h1>
+            </a>
+          </div>
+          <div class="flex justify-between pt-9">
+            <img src="./assets/share_gray.svg" alt="icon">
+            <div class="flex text-0.5 text-hotOsloGray">
+              <img src="./assets/comment_gray.svg" alt="icon">
+              <span class="ml-1">10</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="w-300 border-b-1 pb-2 mt-5">
+          <figure>
+            <a href="https://www.hotnews.ro/stiri-administratie_locala-25705499-cati-retea-termoficare-moderniza-primaria-capitalei-2022-unde-lucreaza-bonus-intamplat-promisiunea-lui-nicusor-dan-schimba-100-retea.htm">
+              <img class="h-200 w-full object-cover rounded-md" src="./assets/image-2019-11-29-23522978-41-tevi-radet.webp" alt="Tevi Radet">
+            </a>
+          </figure>
+          <div class="pt-2.5">
+            <span class="text-hotPersianBlue text-0.5">09:25 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 text-hotPersianBlue border-solid">ACTUALITATE</span>
+            <a href="https://www.hotnews.ro/stiri-administratie_locala-25705499-cati-retea-termoficare-moderniza-primaria-capitalei-2022-unde-lucreaza-bonus-intamplat-promisiunea-lui-nicusor-dan-schimba-100-retea.htm">
+              <h1 class="pt-2">Câți kilometri de rețea de termoficare va moderniza Primăria Capitalei în 2022 și unde se lucrează / Bonus: ce s-a întâmplat cu promisiunea lui...</h1>
+            </a>
+          </div>
+          <div class="flex justify-between pt-3">
+            <img src="./assets/share_gray.svg" alt="icon">
+            <div class="flex text-0.5 text-hotOsloGray">
+              <img src="./assets/comment_gray.svg" alt="icon">
+              <span class="ml-1">28</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="w-300 border-b-1 pb-2 mt-5">
+          <figure>
+            <a href="https://www.hotnews.ro/stiri-esential-25707700-petre-daea-asteapta-punerea-aplicare-legii-vanare-cormoranilor-mananca-mai-mult-peste-decat-romanii.htm">
+              <img class="h-200 w-full object-cover rounded-md" src="./assets/image-2018-05-10-22441789-41-petre-daea.jpeg" alt="Petre Daea">
+            </a>
+          </figure>
+          <div class="pt-2.5">
+            <span class="text-hotPersianBlue text-0.5">16:54 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 text-hotPersianBlue border-solid">ACTUALITATE</span>
+            <a href="https://www.hotnews.ro/stiri-esential-25707700-petre-daea-asteapta-punerea-aplicare-legii-vanare-cormoranilor-mananca-mai-mult-peste-decat-romanii.htm">
+              <h1 class="pt-2">Petre Daea reîncepe "războiul" împotriva cormoranilor: Mănâncă mai mult peşte decât românii</h1>
+            </a>
+          </div>
+          <div class="flex justify-between pt-9">
+            <img src="./assets/share_gray.svg" alt="icon">
+            <div class="flex text-0.5 text-hotOsloGray">
+              <img src="./assets/comment_gray.svg" alt="icon">
+              <span class="ml-1">3</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="w-300 border-b-1 pb-2 mt-5">
+          <figure>
+            <a href="https://www.hotnews.ro/stiri-razboi_ucraina-25706790-live-razboi-ucraina-ziua-157-herson-centrul-contraofensivei-ucrainene-ucraina-rusia-acuza-reciproc-privire-moartea-prizonierilor-razboi-ucraina-spune-legaturile-feroviare-catre-herson-prin-dnipro-fost.htm">
+              <img class="h-200 object-cover w-full rounded-md" src="./assets/image-2022-07-30-25707351-41-cladire-rezidentiala-puternic-avariata-nordul-celui-doilea-oras-ucrainean-marime-harkov.webp" alt="Live Razboi Ucraina Ziua 157">
+            </a>
+          </figure>
+          <div class="pt-2.5">
+            <span class="text-hotPersianBlue text-0.5">07:25 •</span>
+            <span class="bg-hotPersianBlue text-xxs py-1 font-normal tracking-0.8 pr-1.5 pl-2 text-xxs rounded-md text-white">Ultima știre - 18:36</span>
+            <a href="https://www.hotnews.ro/stiri-razboi_ucraina-25706790-live-razboi-ucraina-ziua-157-herson-centrul-contraofensivei-ucrainene-ucraina-rusia-acuza-reciproc-privire-moartea-prizonierilor-razboi-ucraina-spune-legaturile-feroviare-catre-herson-prin-dnipro-fost.htm">
+              <h1 class="pt-2">LIVE Război în Ucraina, ziua 157: Mesaj de o duritate extremă al Ambasadei Rusiei în Marea Britanie. Replica Ucrainei / Gazprom a sistat livrarea...</h1>
+            </a>
+          </div>
+          <div class="flex justify-between pt-3">
+            <img src="./assets/share_gray.svg" alt="icon">
+            <div class="flex text-0.5 text-hotOsloGray">
+              <img src="./assets/comment_gray.svg" alt="icon">
+              <span class="ml-1">4</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="border-b-1 w-300 pb-2 mt-5">
+          <figure>
+            <a href="https://www.hotnews.ro/stiri-international-25707386-premiera-europa-tribunal-italian-cere-analizarea-vaccinurilor-arn-mesager-impotriva-covid-19.htm">
+              <img class="h-200 w-full object-cover rounded-md" src="./assets/image-2022-07-22-25691690-41-vaccin.jpeg" alt="COVID-19">
+            </a>
+          </figure>
+          <div class="pt-2.5">
+            <span class="text-hotPersianBlue text-0.5">14:32 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 text-hotPersianBlue border-solid">ACTUALITATE</span>
+            <a href="https://www.hotnews.ro/stiri-international-25707386-premiera-europa-tribunal-italian-cere-analizarea-vaccinurilor-arn-mesager-impotriva-covid-19.htm">
+              <h1 class="pt-2">Premieră în Europa. Un tribunal italian cere analizarea vaccinurilor ARN mesager împotriva COVID-19</h1>
+            </a>
+          </div>
+          <div class="flex justify-between pt-9">
+            <img src="./assets/share_gray.svg" alt="icon">
+            <div class="flex text-0.5 text-hotOsloGray">
+              <img src="./assets/comment_gray.svg" alt="icon">
+              <span class="ml-1">16</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="border-b-1 w-300 pb-2 mt-5">
+          <figure>
+            <a href="https://mediastandard.ro/tinerii-prefera-sa-se-informeze-mai-mult-de-pe-social-media-decat-din-media-traditionala/">
+              <img class="h-200 w-full object-cover rounded-md" src="./assets/image-2021-12-9-25233284-41-aplicatii-mesagerie-social-media.jpeg" alt="Social Media">
+            </a>
+          </figure>
+          <div class="pt-2.5">
+            <span class="text-hotPersianBlue text-0.5">19:20 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 text-hotPersianBlue border-solid">ACTUALITATE</span>
+            <a href="https://mediastandard.ro/tinerii-prefera-sa-se-informeze-mai-mult-de-pe-social-media-decat-din-media-traditionala/">
+              <h1 class="pt-2">Mediastandard.ro: Tinerii preferă să se informeze mai mult de pe social media decât din media tradiționala</h1>
+            </a>
+          </div>
+          <div class="flex justify-between pt-9">
+            <img src="./assets/share_gray.svg" alt="icon">
+            <div class="flex text-0.5 text-hotOsloGray">
+              <img src="./assets/comment_gray.svg" alt="icon">
+              <span class="ml-1">0</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="flex pt-5 flex-col md:flex-row">
+          <a href="https://www.hotnews.ro/stiri-esential-25707275-parlamentul-european-reactioneaza-declaratiile-lui-viktor-orban-deschis-rasiste-inacceptabile.htm">
+            <figure>
+              <img class="w-619 rounded-md" src="./assets/image-2022-07-30-25707436-41-evgeniy-maloletka-mariupol.jpeg" alt="Live Razboi in Ucraina">
+            </figure>
+          </a>
+          <article class="md:ml-4 w-619 md:w-285">
+            <div class="mb-2.5 pt-2.5 md:pt-0">
+              <span class="text-0.5 text-hotPersianBlue font-medium">15:06 •</span>
+              <span class="text-hotPersianBlue border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ACTUALITATE</span>
+            </div>
+
+            <div class="mb-90">
+              <a href="https://www.hotnews.ro/stiri-razboi_ucraina-25707448-imaginea-zilei-fotojurnalist-alearga-din-calea-flacarilor-intr-lan-grau-bombardat-orcii-lui-mordor.htm">
+                <h1 class="font-semibold mb-2.5 text-lg">Imaginea zilei: Un fotojurnalist aleargă din calea flăcărilor intr-un lan de grâu bombardat de "orcii lui Mordor"</h1>
+                <p class="text-hotblack text-base font-normal font-Literata">Fotojurnalistul ucrainean Evgeniy
+                  Maloletka a fost surprins vineri fugind într-un lan de grâu în flăcări în timp ce se afla pe teren
+                  pentru a-și face meseria.</p>
+              </a>
+            </div>
+            <div class="flex justify-between border-b-1 pb-2 pt-6">
+              <img src="./assets/share_gray.svg" alt="icon">
+              <div class="flex">
+                <img src="./assets/comment_gray.svg" alt="icon">
+                <span class="ml-1 text-0.5 text-hotOsloGray">0</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="flex pt-5 flex-col md:flex-row ">
+          <a href="https://www.hotnews.ro/stiri-esential-25707275-parlamentul-european-reactioneaza-declaratiile-lui-viktor-orban-deschis-rasiste-inacceptabile.htm">
+            <figure>
+              <img class="w-619 rounded-md" src="./assets/image-2022-07-25-25696555-41-cresteri-taxe.jpeg" alt="Live Razboi in Ucraina">
+            </figure>
+          </a>
+          <article class="md:ml-4 w-619 md:w-285">
+            <div class="mb-2.5 pt-2.5 md:pt-0">
+              <span class="text-0.5 text-hotBurntSienna font-medium">08:33 •</span>
+              <span class="text-hotBurntSienna border-hotBurntSienna font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ECONOMIE</span>
+            </div>
+            <div class="pb-8 md:pb-16">
+              <a href="https://economie.hotnews.ro/stiri-finante_banci-25704757-taxe-cresc-1-august-7-modificari-fiscale-supraimpozitarea-muncii-part-time-tigari-alcool.htm">
+                <h1 class="font-semibold mb-2.5 text-lg">Ce taxe cresc de la 1 august / 7 modificări fiscale: de la supraimpozitarea muncii part-time, la țigări și alcool</h1>
+                <p class="text-hotblack text-base font-normal font-Literata">Unele măsuri din Ordonanța 16/2022 intră în vigoare de la 1 august, fiind legate de accizele la tutun și alcool, iar altele de taxarea veniturilor din jocuri de noroc și suprataxarea muncii part-time.</p>
+              </a>
+            </div>
+            <div class="flex justify-between border-b-1 pb-2 pt-6">
+              <img src="./assets/share_gray.svg" alt="icon">
+              <div class="flex">
+                <img src="./assets/comment_gray.svg" alt="icon">
+                <span class="ml-1 text-0.5 text-hotOsloGray">16</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <!-- Here ends the sections after main -->
+
+      <section class="pl-5 hidden mid:flex flex-col RIGHT">
+        <div class="flex border-b-3 border-solid border-hotPersianBlue pb-2.5 w-300">
+          <img class="pr-1" src="./assets/ic_sun.svg" alt="Ultima Ora">
+          <a class="text-xl font-extrabold text-hotPersianBlue tracking-0.7" href="https://www.hotnews.ro/ultima_ora">ULTIMA ORA</a>
+        </div>
+        <article class="pt-4.5 text-0.5 text-hotBurntSienna">
+          <a href="https://economie.hotnews.ro/stiri-energie-25703257-putea-europa-apela-setsuden-controversata-strategie-japoneza-economisire-energiei-electrice.htm">
+            <span>14:28 •</span>
+            <span class="border-hotBurntSienna font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-x-1 border-y-1 border-solid">ECONOMIE</span>
+          </a>
+        </article>
+        <div class="mt-2">
+          <a href="https://economie.hotnews.ro/stiri-energie-25703257-putea-europa-apela-setsuden-controversata-strategie-japoneza-economisire-energiei-electrice.htm">
+            <h1>Ar putea fi Europa nevoită să apeleze la „Setsuden”, strategia japoneză de economisire a energiei electrice?</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotPersianBlue">
+          <a href="https://www.hotnews.ro/stiri-politic-25703242-premierul-ciuca-replica-pentru-viktor-orban-astfel-declaratii-nedorite-nu-isi-locul-intr-europa-unde-27-tari-traiesc-pace-prosperitate.htm">
+            <span>14:20 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ACTUALITATE</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://www.hotnews.ro/stiri-politic-25703242-premierul-ciuca-replica-pentru-viktor-orban-astfel-declaratii-nedorite-nu-isi-locul-intr-europa-unde-27-tari-traiesc-pace-prosperitate.htm">
+            <h1>​Premierul Ciucă, replică pentru Viktor Orban: Astfel de declaraţii nedorite nu îşi au locul într-o Europă unde 27 de ţări trăiesc în pace şi prosperitate</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotPersianBlue">
+          <a href="https://www.hotnews.ro/stiri-razboi_ucraina-25703213-ramane-tanc-rusesc-cand-ucrainenii-reusesc-loveasca-sus.htm">
+            <span>13:58 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ACTUALITATE</span>
+          </a>
+        </article>
+        
+        <div class="mt-2">
+          <a href="https://www.hotnews.ro/stiri-razboi_ucraina-25703213-ramane-tanc-rusesc-cand-ucrainenii-reusesc-loveasca-sus.htm">
+            <h1>VIDEO Ce rămâne în urma unui tanc T-80U rusesc când ucrainenii reușesc să-l lovească de sus cu o armă antitanc</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotChateauGreen">
+          <a href="https://sport.hotnews.ro/stiri-fotbal-25703191-muzeul-fotbalului-poate-aduce-bucurestiului-langa-vizibilitate-milioane-euro-buget.htm">
+            <span>13:39•</span>
+            <span class="border-hotPersianBlue text-white bg-hotChateauGreen font-normal tracking-0.8 py-0.5 pr-1.5 text-xxs rounded-md py-1.5 px-2">webPR</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://sport.hotnews.ro/stiri-fotbal-25703191-muzeul-fotbalului-poate-aduce-bucurestiului-langa-vizibilitate-milioane-euro-buget.htm">
+            <h1>Muzeul Fotbalului poate aduce Bucureștiului, pe lângă vizibilitate, milioane de euro la buget</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotBurntSienna">
+          <a href="https://economie.hotnews.ro/stiri-finante_banci-25703174-din-nou-disfunctionalitati-tehnice-anaf.htm">
+            <span>13:36 •</span>
+            <span class="border-hotBurntSienna font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ECONOMIE</span>
+          </a>
+        </article>
+        <div class="mt-2">
+          <a href="https://economie.hotnews.ro/stiri-finante_banci-25703174-din-nou-disfunctionalitati-tehnice-anaf.htm">
+            <h1 class="title">Din nou: Disfuncționalități tehnice la ANAF</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotPersianBlue">
+          <a href="https://www.hotnews.ro/stiri-razboi_ucraina-25703168-video-mesajul-lui-zelenski-dupa-teroarea-rachetelor-nu-vom-ceda-nu-vom-lasa-intimidati.htm">
+            <span>13:34 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ACTUALITATE</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://www.hotnews.ro/stiri-razboi_ucraina-25703168-video-mesajul-lui-zelenski-dupa-teroarea-rachetelor-nu-vom-ceda-nu-vom-lasa-intimidati.htm">
+            <h1>VIDEO ​Mesajul lui Zelenski, după teroarea rachetelor: Nu vom ceda! Nu ne vom lăsa intimidați!</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-white">
+          <a href="https://www.hotnews.ro/stiri-specialisti_deloitte-25703156-schimbari-majore-impozitarea-domeniul-horeca-microintreprinderilor-regim-fiscal-alegem.htm">
+            <span class="border-hotPersianBlue bg-hotBarleyCorn font-normal py-1 px-2 text-xxs tracking-0.8 rounded-md">Dosare Juridice - Fiscalitate</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://www.hotnews.ro/stiri-specialisti_deloitte-25703156-schimbari-majore-impozitarea-domeniul-horeca-microintreprinderilor-regim-fiscal-alegem.htm">
+            <h1>Schimbări majore la impozitarea în domeniul HoReCa și a microîntreprinderilor. Ce regim fiscal alegem?</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotPersianBlue">
+          <a href="https://www.hotnews.ro/stiri-esential-25703124-editiadedimineata-pregatiri-europa-pentru-iarna-rationalizarilor-sfaturi-occidentale-pentru-masuri-vremea-lui-nea-nicu.htm">
+            <span>13:23 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ACTUALITATE</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://www.hotnews.ro/stiri-esential-25703124-editiadedimineata-pregatiri-europa-pentru-iarna-rationalizarilor-sfaturi-occidentale-pentru-masuri-vremea-lui-nea-nicu.htm">
+            <h1>editiadedimineata.ro: Pregătiri în Europa pentru iarna raționalizărilor. Sfaturi occidentale pentru măsuri ”ca pe vremea lui nea Nicu”</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotChateauGreen">
+          <a href="https://sport.hotnews.ro/stiri-motor-25703104-sebastian-vettel-retragere-formula1-sezon-2022-anunt-campion-mondial-instagram-pilot-aston-martin.htm">
+            <span>13:19 •</span>
+            <span class="border-hotChateauGreen font-semibold tracking-0.8 py-0.5 px-4 text-xxs rounded-md border-1 border-solid">SPORT</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://sport.hotnews.ro/stiri-motor-25703104-sebastian-vettel-retragere-formula1-sezon-2022-anunt-campion-mondial-instagram-pilot-aston-martin.htm">
+            <h1>VIDEO Sebastian Vettel a anunțat că se va retrage din Formula 1</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotPersianBlue">
+          <a href="https://www.hotnews.ro/stiri-opinii-25703095-despre-ungaria-azi-prin-ochii-unui-istoric-clujean.htm">
+            <span>13:17 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ACTUALITATE</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://www.hotnews.ro/stiri-opinii-25703095-despre-ungaria-azi-prin-ochii-unui-istoric-clujean.htm">
+            <h1>Despre Ungaria de azi, prin ochii unui istoric clujean</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotPersianBlue">
+          <a href="https://www.hotnews.ro/stiri-coronavirus-25703080-peste-9-300-noi-cazuri-covid-19-incidenta-bucuresti-apropie-8-mie.htm">
+            <span>13:14 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ACTUALITATE</span> 
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://www.hotnews.ro/stiri-coronavirus-25703080-peste-9-300-noi-cazuri-covid-19-incidenta-bucuresti-apropie-8-mie.htm">
+            <h1>Peste 9.300 de noi cazuri de COVID-19. Incidența în București se apropie de 8 la mie</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotPersianBlue">
+          <a href="https://www.hotnews.ro/stiri-mediu-25703066-omenirea-consumat-deja-toate-resursele-care-pamantul-poate-produce-2022-fara-epuizeze.htm">
+            <span>13:12 •</span>
+            <span class="border-hotPersianBlue font-semibold tracking-0.8 py-0.5 pr-1.5 pl-2 text-xxs rounded-md border-1 border-solid">ACTUALITATE</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://www.hotnews.ro/stiri-mediu-25703066-omenirea-consumat-deja-toate-resursele-care-pamantul-poate-produce-2022-fara-epuizeze.htm">
+            <h1>Omenirea a consumat deja toate resursele pe care Pământul le poate produce în 2022 fără să se epuizeze</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-white">
+          <a href="https://www.hotnews.ro/stiri-esential-25703057-analiza-group-holding-mobilitatea-internationala-factorul-cheie-deficitului-forta-munca-din-uniunea-europeana.htm">
+            <span class="bg-hotPersianBlue font-semibold tracking-0.8 py-1 pr-1.5 pl-2 text-xxs rounded-md">Articol sustinut de Gi Group</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://www.hotnews.ro/stiri-esential-25703057-analiza-group-holding-mobilitatea-internationala-factorul-cheie-deficitului-forta-munca-din-uniunea-europeana.htm">
+            <h1>Analiză Gi Group Holding. Mobilitatea internațională, factorul cheie al deficitului de forță de muncă din Uniunea Europeană</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotChateauGreen">
+          <a href="https://sport.hotnews.ro/stiri-fotbal-25703032-fenerbahce-dinamo-kiev-preliminarii-champions-league-scandari-vladimir-putin-fani-turci-reactie-ambasador-ucraina-mircea-lucescu.htm">
+            <span>13:01 •</span>
+            <span class="border-hotChateauGreen font-semibold tracking-0.8 py-0.5 px-4 text-xxs rounded-md border-1 border-solid">SPORT</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://sport.hotnews.ro/stiri-fotbal-25703032-fenerbahce-dinamo-kiev-preliminarii-champions-league-scandari-vladimir-putin-fani-turci-reactie-ambasador-ucraina-mircea-lucescu.htm">
+            <h1>Ambasada Ucrainei din Turcia, prima reacție după ce fanii lui Fenerbahce i-au scandat numele lui Vladimir Putin la meciul cu Dinamo Kiev</h1>
+          </a>
+        </div>
+
+        <article class="pt-4 text-0.5 text-hotTundora">
+          <a href="https://revistapresei.hotnews.ro/stiri-subiectele_zilei-25703766-fanatik-exclusiv-senator-roman-castigat-77-000-lei-pacanele-adrian-costea-fost-impatimit.htm">
+            <span>17:44 •</span>
+            <span class="border-hotTundora font-semibold tracking-0.8 py-1 px-4 text-xxs rounded-md border-1 border-solid">REVISTA PRESEI</span>
+          </a>
+        </article>
+
+        <div class="mt-2">
+          <a href="https://revistapresei.hotnews.ro/stiri-subiectele_zilei-25703766-fanatik-exclusiv-senator-roman-castigat-77-000-lei-pacanele-adrian-costea-fost-impatimit.htm">
+            <h1>fanatik.ro: Exclusiv. Un senator român a câștigat 77.000 de lei la păcănele. Adrian Costea: "Am fost un împătimit"</h1>
+          </a>
+        </div>
+
+        <article class="mt-3 py-0.5 px-10 text-hotPersianBlue text-base font-medium tracking-1 rounded-md border-solid border-hotPersianBlue  border-1 text-center">
+          <a href="https://www.hotnews.ro/ultima_ora">
+            <span>Vezi toate articolele</span>
+          </a>
+        </article>
+
+        <div class="mb-3.5 bg-hotPersianBlue mt-5 rounded-md py-6 px-7 text-white">
+          <div class="flex -ml-4"> 
+            <img src="https://www.hotnews.ro/static/assets/icons/ic_sun_white.svg" alt="PROIECTE">
+            <span class="ml-1.5 text-ssm">PROIECTE</span>
+          </div>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/dateinbusiness">#BigData in business</a></h2>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/facem_romania_bine">Facem Romania Bine</a>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/romaine_medlife">RoMâine MedLife</a></h2>
+          <h2 class="mt-2.5"><a href="https://economie.hotnews.ro/blogul_pwc_romania">Blogul PwC România</a></h2>
+          <h2 class="mt-2.5"><a href="https://economie.hotnews.ro/fiscalitatea_la_zi">EY - Fiscalitatea la zi</a></h2>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/meetyourmep">Meet Your MEP</a></h2>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/pagini_de_cod">Pagini de [cod]</a></h2>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/alternative_fara_fum">Alternative fără fum</a></h2>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/drink_insider">Drink Insider</a></h2>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/dumbrava_vlasiei">Dumbrava Vlăsiei</a></h2>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/godigital">GoDigital</a></h2>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/pets_and_vets">Pets & Vets</a></h2>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/ajutor_pentru_ucraina">Ajutor pentru Ucraina</a></h2>
+          <h2 class="mt-2.5"><a href="https://www.hotnews.ro/recomandare_de_lectura">Recomandări de lectură</a></h2>
+        </div>
+      </section>
+    </div>
+    <!-- REAPERUL TUTUROR -->
+  </body>
+</html>
